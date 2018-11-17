@@ -2,7 +2,12 @@
 layout: post
 title:  "Hello Minimal!"
 date:   2018-11-17 14:25:58
-categories: start blog
+categories: start
+description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique hic vel, eligendi quasi perferendis corrupti rerum delectus a fuga nisi!
+tags: 
+  - blog
+  - teste
+  - testando
 ---
 
 # HEADING 1

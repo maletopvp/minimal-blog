@@ -2,7 +2,12 @@
 layout: post
 title:  "Primeiro Post"
 date:   2018-11-17 16:27:58
-categories: start blog
+categories: blog
+description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique hic vel, eligendi quasi perferendis corrupti rerum delectus a fuga nisi!
+tags: 
+  - blog
+  - teste
+  - testando
 ---
 
 # Lorem ipsum dolor sit amet
