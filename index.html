@@ -1,0 +1,23 @@
+---
+layout: default
+pagination: 
+    enabled: true
+---
+<div class="content list">
+  {% if site.posts.size == 0 %}
+      <h2> No posts found =( </h2>
+  {% else %}
+
+    {% for post in paginator.posts %}
+      <div class="list-item">
+          <h2 class="list-post-title">
+              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+          <div class="list-post-date">
+              <time>{{ post.date | date_to_string }}</time>
+          </div>
+      </div>
+    {% endfor %}
+    {% include pagination.html %}
+  {% endif %}
+</div>
