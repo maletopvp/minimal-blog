@@ -13,11 +13,21 @@ pagination:
           <h2 class="list-post-title">
               <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
           </h2>
+          <h4><b>{{ post.categories }}</b></h4>
           <div class="list-post-date">
               <time>{{ post.date | date_to_string }}</time>
-          </div>
+              <p>{{ post.description }}</p>
+              <p><b>Tags:</b>
+                {% for tags in post.tags %}
+                  <span>{{ tags }}</span>
+                {% endfor %}
+              </p>
+          </div> 
       </div>
+      <hr>
     {% endfor %}
-    {% include pagination.html %}
+    <center>
+      {% include pagination.html %}
+    </center>
   {% endif %}
 </div>
