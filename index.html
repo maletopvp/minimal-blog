@@ -16,8 +16,9 @@ pagination:
           <h4><b>{{ post.categories }}</b></h4>
           <div class="list-post-date">
               <time>{{ post.date | date_to_string }}</time>
-              <p>{{ post.description }}</p>
-              <p><b>Tags:</b>
+              <p>{{ post.description }} <a href="{{ post.url | prepend: site.baseurl }}">Saber Mais...</a></p>
+              <p>
+                <b>Tags:</b>
                 {% for tags in post.tags %}
                   <span>{{ tags }}</span>
                 {% endfor %}
@@ -26,8 +27,6 @@ pagination:
       </div>
       <hr>
     {% endfor %}
-    <center>
-      {% include pagination.html %}
-    </center>
+    {% include pagination.html %}
   {% endif %}
 </div>
