@@ -1,10 +1,13 @@
 <header class="masthead">
-  <h1 class="masthead-title">
-    <a href="{{ site.baseurl }}/">{{site.title}}<span>&#39;s Blogs</span></a>
-  </h1>
-  <nav class="masthead-nav">
-    {% for page in site.pages %}
-      <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-    {% endfor %}
-  </nav>
+  <center>
+    <h1 class="masthead-title">
+      <a href="{{ site.baseurl }}/">{{site.title}}<span>&#39;s Blogs</span></a>
+    </h1>
+    <nav class="masthead-nav">
+        <a href="{{ site.baseurl }}/">Home</a>
+      {% for page in site.pages %}
+        <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+      {% endfor %}
+    </nav>
+  </center>
 </header>
