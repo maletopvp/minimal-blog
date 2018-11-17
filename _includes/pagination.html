@@ -1,0 +1,18 @@
+<!-- Pagination links -->
+{% if paginator.total_pages > 1 %}
+    <div class="pagination">
+    {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous">Anterior</a>
+    {% else %}
+        <span class="previous">Anterior</span>
+    {% endif %}
+    <span class="page_number ">
+        <b>{{ paginator.page }}</b> de <b>{{ paginator.total_pages }}</b>
+    </span>
+    {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next">Próximo</a>
+    {% else %}
+        <span class="next">Próximo</span>
+    {% endif %}
+    </div>
+{% endif %}
